@@ -89,10 +89,10 @@ public class Principal {
         //     System.out.println(funcionario.getNome() + " ganha " + multiplicador + " salários mínimos.");
         // });
 
-        funcionarios.forEach(funcionario ->{
-                   BigDecimal[]  salarioQnt = funcionario.getSalario().divideAndRemainder(salarioMinimo);
-                   System.out.println(salarioQnt);
-        });
+        // funcionarios.forEach(funcionario ->{
+        //            BigDecimal  salarioQnt = funcionario.getSalario().divideAndRemainder(salarioMinimo);
+        //            System.out.println(salarioQnt);
+        // });
 
         
     }
