@@ -69,7 +69,7 @@ public class Principal {
         }
 
         // 3.10 - Imprimir lista de funcionários por ordem alfabética
-        System.out.println("\nLista de Funcionários em ordem alfabética:");
+        System.out.println("\n Funcionários em ordem alfabética:");
         funcionarios.stream()
                 .sorted(Comparator.comparing(Funcionario::getNome))
                 .forEach(System.out::println);
@@ -82,18 +82,14 @@ public class Principal {
         System.out.println("Total: " + totalSalarios);
 
         // 3.12 - Imprimir quantos salários mínimos ganha cada funcionário
-        BigDecimal salarioMinimo = new BigDecimal("1212.00");
-        System.out.println("\nSalários em múltiplos do salário mínimo:");
-        // funcionarios.forEach(funcionario -> {
-        //     BigDecimal multiplicador = funcionario.getSalario().divide(salarioMinimo, 2, BigDecimal.ROUND_DOWN);
-        //     System.out.println(funcionario.getNome() + " ganha " + multiplicador + " salários mínimos.");
-        // });
+        BigDecimal qntdSalario= new BigDecimal("1212.00");
+        System.out.println("\nQuantidade de salario minimo de cada funcionario:");
+         funcionarios.forEach(funcionario -> {
+             BigDecimal multiplicador = funcionario.getSalario().divide(qntdSalario, 2, BigDecimal.ROUND_DOWN);
+             System.out.println(funcionario.getNome() + " ganha " + multiplicador + " salários mínimos.");
+         });
 
-        // funcionarios.forEach(funcionario ->{
-        //            BigDecimal  salarioQnt = funcionario.getSalario().divideAndRemainder(salarioMinimo);
-        //            System.out.println(salarioQnt);
-        // });
-
+       
         
     }
 
